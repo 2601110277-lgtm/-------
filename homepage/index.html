@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Travel - 꿈꾸던 여행의 시작</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="promo-bar">
+        <span>🔥 이번 주 마감 임박! 지금 예약 시 전 상품 10% 추가 할인 </span>
+        <a href="#">자세히 보기 →</a>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">GLOBAL TRAVEL</div>
+            <ul class="main-menu">
+                <li class="menu-item">
+                    <a href="#">해외여행</a>
+                    <ul class="submenu">
+                        <li><a href="#">동남아/대만</a></li>
+                        <li><a href="#">유럽/아프리카</a></li>
+                        <li><a href="#">미주/캐나다</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">항공권</a>
+                    <ul class="submenu">
+                        <li><a href="#">실시간 할인항공권</a></li>
+                        <li><a href="#">비즈니스 특가</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">호텔</a>
+                    <ul class="submenu">
+                        <li><a href="#">국내 인기 호텔</a></li>
+                        <li><a href="#">해외 럭셔리 리조트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="hero">
+            <h1>어디로 떠나고 싶으신가요?</h1>
+            <p>전 세계 100여 개 도시의 특가 상품을 만나보세요.</p>
+            
+            <div class="search-box">
+                <div class="search-item">
+                    <span>📍</span>
+                    <input type="text" placeholder="어디로 떠나시나요?">
+                </div>
+                <div class="search-item">
+                    <span>📅</span>
+                    <input type="date">
+                </div>
+                <button>검색하기</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="packages">
+            <h2>지금 가장 인기 있는 여행지</h2>
+            <div class="container">
+                
+                <input type="checkbox" id="modal-paris" class="modal-check">
+                <label for="modal-paris" class="card">
+                    <div class="img-box" style="background-image: url('paris.jpg');">
+                        <span class="badge">BEST</span>
+                    </div>
+                    <div class="info">
+                        <h3>프랑스 파리 5일</h3>
+                        <span class="price">1,200,000원~</span>
+                    </div>
+                </label>
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <label for="modal-paris" class="close-btn">&times;</label>
+                        <img src="paris.jpg" class="modal-img">
+                        <h3>프랑스 파리 5일 상세일정</h3>
+                        <div class="schedule">
+                            <p><strong>1일차:</strong> 파리 도착 및 호텔 체크인, 에펠탑 야경 감상</p>
+                            <p><strong>2일차:</strong> 루브르 박물관 내부 관람 및 샹젤리제 거리 투어</p>
+                            <p><strong>3일차:</strong> 몽마르트르 언덕 및 사크레쾨르 대성당 방문</p>
+                            <p><strong>4일차:</strong> 세느강 유람선(바토무슈) 및 자유 쇼핑</p>
+                            <p><strong>5일차:</strong> 호텔 조식 후 공항 이동 및 귀국</p>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="modal-india" class="modal-check">
+                <label for="modal-india" class="card">
+                    <div class="img-box" style="background-image: url('india.jpg');">
+                        <span class="badge" style="background: #ff9500;">인기</span>
+                    </div>
+                    <div class="info">
+                        <h3>인도 타지마할 7일</h3>
+                        <span class="price">790,000원~</span>
+                    </div>
+                </label>
+                <div class="modal-overlay">
+                    <div class="modal-content">
+                        <label for="modal-india" class="close-btn">&times;</label>
+                        <img src="india.jpg" class="modal-img">
+                        <h3>인도 타지마할 7일 상세일정</h3>
+                        <div class="schedule">
+                            <p><strong>1일차:</strong> 델리 도착 및 현지 가이드 미팅</p>
+                            <p><strong>2일차:</strong> 아그라로 이동, 타지마할 관람</p>
+                            <p><strong>3일차:</strong> 아그라 성 및 미니 타지마할 투어</p>
+                            <p><strong>4일차:</strong> 자이푸르 이동 및 전통 시장 체험</p>
+                            <p><strong>5-7일차:</strong> 델리 관광 후 귀국</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">GLOBAL TRAVEL</div>
+            <p>(주) 글로벌트래블 | 대표이사: 홍길동 | 사업자등록번호: 123-45-67890</p>
+            <p>주소: 서울특별시 중구 세종대로 110 | Tel: 1588-0000</p>
+            <p style="margin-top: 15px; opacity: 0.6;">&copy; 2026 Global Travel. All rights reserved.</p>
+            <div class="sns-icons">
+                <span>📸 Instagram</span> | <span>📘 Facebook</span> | <span>📺 YouTube</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
