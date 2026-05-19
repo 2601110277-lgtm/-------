@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹패턴 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #menu{
+            width: 260px;
+            float: right;
+        }
+        #content{
+            width: 700px;
+            float: left;
+        }
+        #li{
+            list-style: none;
+        }
+        @media screen and(max-width: 767px) {
+            body{
+                width: auto;
+            }
+            #menu{
+                width: auto;
+                float: right;
+            }
+            #content{
+                width: 700px;
+                float: left;
+            }
+            #li{
+                list-style: none;
+            }
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Lorem ipsum</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque impedit eos quos dolorum recusandae ducimus distinctio minima, maiores suscipit perspiciatis itaque placeat? Tenetur, beatae. Nihil excepturi voluptas voluptates id incidunt?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque est molestiae aliquid ab repudiandae inventore nostrum repellendus, dolorem nisi unde, sunt magnam ducimus omnis animi explicabo corrupti pariatur, vero nulla!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis laboriosam animi nostrum? Architecto, autem tenetur nisi, enim rerum totam dignissimos ab magnam perspiciatis quibusdam officia quis voluptatem. Ex, debitis excepturi.
+        </p>
+    </div>
+</body>
+</html>
