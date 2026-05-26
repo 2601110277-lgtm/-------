@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수 선언</title>
+    <script>
+        let anmFunc = function(){
+            window.onload = function(){
+    let firstH1 = document.getElementById("first_h1");
+    firstH1.style.color = "orange";
+    firstH1.style.backgroundColor = "red";
+    firstH1.innerHTML = "첫 번째 h1 요소입니다.";
+}
+
+function changeDarkMode(){
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.getElementById("first_h1").style.color = "lightgray";
+    document.getElementById("first_h1").style.backgroundColor = "rgb(0, 255, 255)";
+    document.querySelector("button").style.backgroundColor = "darkgray";
+    document.querySelector("button").style.color = "lightgray";
+}
+        }
+       alert(typeof(anmFunc) + ":" + anmFunc);
+    </script>
+</head>
+<body>
+    <button onclick="anmFunc()">익명함수 호출</button>
+</body>
+</html>
