@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 관련 속성들</title>
+<script>
+    //textContent, innerHTML
+    window.onload = function(){
+        let img1 = document.getElementById("img1");
+
+        //img1.src = "https://placehold.co/300x200";
+        img1.src = "imgs/,,.png";
+        img1.width = 500;
+        img1.height = 400;
+    }
+    function changeImage(btn){
+        if(btn.innerText === "떡볶이이미지 변경"){
+           img1.src = "imgs/testk.JPG";
+        btn.innerText = "불닭이미지변경"; 
+        }else{
+            img1.src = "imgs/,,.png";
+            btn.innerText = "떡볶이이미지 변경"
+        }
+        
+        
+    }
+</script>
+</head>
+<body>
+    <button onclick="changeImage(this)">떡볶이이미지 변경</button>
+    <br><br>
+    <img id="img1">
+</body>
+</html>
