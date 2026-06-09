@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인라인 이벤트 모델 1</title>
     <script>
+        // 변수를 분리하여 서로 간섭하지 않게 합니다.
+        let clickCount = 1; // 1번 이미지용
+        let slideCount = 1; // 2번 이미지용
+
+        // 페이지의 모든 HTML 요소가 로딩된 후에 실행되는 공간
+        window.onload = function(){
+            // 1. 네이버 이동 막기 (기본 이벤트 제거)
+            let a1 = document.getElementById("a1");
+            if(a1) {
+                a1.onclick = function(){
+                    return false; 
+                }
+            }
+
+            // 2. [해결책] 여기서 자동 이미지 슬라이드 함수를 호출해줍니다!
+            showImageSlide();
+        }
+        
         function greet() {
             alert('안녕하세요~ 인라인 이벤트 모델 2');
         }
@@ -12,6 +30,7 @@
         function addStar(btn){
             btn.textContent += '★';
         }
+
         function overChange(btn){
             btn.style.backgroundColor = "magenta";
             btn.style.color = "white";
@@ -22,33 +41,38 @@
             btn.style.color = "black";
         }
 
-        let count = 1;
+
         function changeImg(img){
-            count++;
-            if(count == 6){
-                count = 1;
+            clickCount++;
+            if(clickCount == 6){
+                clickCount = 1;
             }
-            img.src = "imgs/card0"+count+".png";
+            img.src = "imgs/card0" + clickCount + ".png";
         }
 
+        // 자동으로 변경되는 이미지 기능
         function showImageSlide(){
-            let img =  document.getElementById("img2");
+            let img = document.getElementById("img2");
             setInterval(function(){
-                count++;
-                if(count == 6){
-                    count = 1;
+                slideCount++;
+                if(slideCount == 6){
+                    slideCount = 1;
                 }
-                img.src = "imgs/card0"+count+".png";
-            }, 2000);
+                img.src = "imgs/card0" + slideCount + ".png";
+            }, 1000); // 1초마다 변경
         }
+
     </script>
 </head>
 <body>
     <button onclick="alert('인라인 이벤트 모델 1')">인라인 이벤트 모델</button><br><br>
     <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
     <button onclick="addStar(this)">별 추가 </button>
-    <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button>
-     <img src="imgs/card01.png" width="400" height="300" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
-     <img src="imgs/card01.png" width="400" height="300" id="img2">
+    <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button><br><br>
+    
+    <img src="imgs/card01.png" width="400" height="300" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
+    <img src="imgs/card01.png" width="400" height="300" id="img2"><br><br>
+     
+    <a href="https://www.naver.com/" id="a1">디폴트 이벤트 제거</a>
 </body>
 </html>
