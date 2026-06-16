@@ -19,12 +19,20 @@
     <script>
         $(document).ready(
             function(){
-                $("#box").hover(
+                $("h1").hover(
                     function(){
-                        $(this).addClass("hover");
+                        $(this).css({
+                            backgroundColor : "red",
+                            color : "white",
+                            height : "50px",
+                            width : "200px",
+                        });
                     },
                     function(){
-                        $(this).removeClass("hover");
+                        $(this).css({
+                            backgroundColor : "",
+                            color : "",
+                        });
                     }
                 );
             }
@@ -32,6 +40,6 @@
     </script>
 </head>
 <body>
-    <div id="box"></div>
+    <h1>click here</h1>
 </body>
 </html>
