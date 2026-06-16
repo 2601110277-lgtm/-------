@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+    $(document).ready(
+        function(){
+            $("#btn_fadetoggle").click(
+                function(){
+                    $(".page").fadeToggle(2000);
+                }
+            );
+            $("#btn_toggle").click(
+    function(){
+        $(".page").toggle(2000);
+    }
+);
+
+$("#btn_slidetoggle").click(
+    function(){
+        $(".page").slideToggle(2000);
+    }
+);
+        }
+    );
+</script>
+</head>
+<body>
+    <button id="btn_fadetoggle">Show Fade Toggle</button>&nbsp;
+    <button id="btn_toggle">Show Toggle</button>&nbsp;&nbsp;
+    <button id="btn_slidetoggle">Show Slide Toggle</button>
+
+    <div class="page">
+        <h1>jQuery Fade Toggle</h1>
+
+        <p>jQuery의 fadeToggle() 메서드는 요소의 가시성을 토글하는 데 사용됩니다. 요소가 보이는 경우 서서히 사라지고, 숨겨진 경우 서서히 나타납니다. 이 메서드는 요소의 현재 상태에 따라 자동으로 작동하므로, 개발자가 직접 상태를 확인할 필요가 없습니다.</p>
+    </div>
+</body>
+</html>
